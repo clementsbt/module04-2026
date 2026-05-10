@@ -13,7 +13,7 @@ export default function Home() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:3001/events')
+        fetch('http://localhost:3000/events')
             .then(res => res.json())
             .then(data => {
                 setEvents(data)
