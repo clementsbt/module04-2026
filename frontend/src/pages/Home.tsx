@@ -16,7 +16,7 @@ export default function Home() {
         fetch('http://localhost:3000/events')
             .then(res => res.json())
             .then(data => {
-                setEvents(data)
+                setEvents(data.events || [])
                 setLoading(false)
             })
             .catch(() => setLoading(false))
